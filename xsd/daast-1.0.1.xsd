@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation=""></xs:include>
-    <xs:annotation>
-		<xs:documentation xml:lang="en">
-			IAB DAAST, Digital Audio Ad Serving Template, audio xml ad response, Version 1.0.0, xml schema prepared by Adswizz / Bogdan
-			Bocse on 2014.09.04
-		</xs:documentation>
-	</xs:annotation>
-	<xs:element name="DAAST">
+    <xs:element name="DAAST">
 		<xs:annotation>
-			<xs:documentation>IAB DAAST, Digital Audio Ad Serving Template, audio xml ad response, Version 1.0.0, xml schema prepared by Adswizz / Bogdan Bocse on 2014.09.04
+			<xs:documentation>IAB DAAST, Digital Audio Ad Serving Template, audio xml ad response, Version 1.0.1, xml schema.
 			</xs:documentation>
 		</xs:annotation>
 
@@ -126,10 +119,6 @@
 														</xs:annotation>
 														<xs:complexType>
 															<xs:choice>
-
-
-
-
 																<xs:element name="Linear" minOccurs="0" maxOccurs="1">
 																	<xs:complexType>
 																		<xs:sequence>
@@ -194,8 +183,8 @@
 																											<xs:annotation>
 																												<xs:documentation>
 																													MIME type. Popular MIME types include, but are not
-																													limited to “audio/mpeg” for MP3/MPEG Audio, and
-																													“audio/mp4” for MP4. Image
+																													limited to ?udio/mpeg?for MP3/MPEG Audio, and
+																													?udio/mp4?for MP4. Image
 																													ads or interactive ads can
 																													be included in the MediaFiles section with
 																													appropriate Mime types
@@ -249,9 +238,9 @@
 																													The apiFramework defines the method to use for
 																													communication if the MediaFile is interactive.
 																													Suggested values for this
-																													element are “VPAID”,
-																													“FlashVars” (for Flash/Flex), “initParams” (for
-																													Silverlight) and “GetVariables” (variables placed in
+																													element are ?PAID?
+																													?lashVars?(for Flash/Flex), ?nitParams?(for
+																													Silverlight) and ?etVariables?(variables placed in
 																													key/value pairs on
 																													the asset request).
 																												</xs:documentation>
@@ -322,11 +311,6 @@
 																		</xs:attribute>
 																	</xs:complexType>
 																</xs:element>
-
-																<!-- Removed, as previously part of VAST: DAAST does not contain nonlinear ads -->
-																<!-- <xs:element name="NonLinearAds" minOccurs="0" maxOccurs="1"> <xs:complexType> <xs:sequence> <xs:element name="TrackingEvents" minOccurs="0" type="TrackingEvents_type" 
-																	maxOccurs="1" /> <xs:element name="NonLinear" minOccurs="1" maxOccurs="unbounded" type="NonLinear_type"> <xs:annotation> <xs:documentation>Any number of companions in any 
-																	desired pixel dimensions.</xs:documentation> </xs:annotation> </xs:element> </xs:sequence> </xs:complexType> </xs:element> -->
 															</xs:choice>
 
 															<xs:attribute name="id" type="xs:string" use="optional" />
@@ -466,7 +450,7 @@
 
 			<xs:attribute name="version" type="xs:string" use="required">
 				<xs:annotation>
-					<xs:documentation>Current version is 3.0.</xs:documentation>
+					<xs:documentation>Current version is 1.0.</xs:documentation>
 				</xs:annotation>
 			</xs:attribute>
 
@@ -578,7 +562,7 @@
 			</xs:element>
 			<xs:element name="AdParameters" minOccurs="0" maxOccurs="1" type="AdParameters_type">
 				<xs:annotation>
-					<xs:documentation>Data to be passed into the companion ads. The apiFramework defines the method to use for communication (e.g. “FlashVar”)</xs:documentation>
+					<xs:documentation>Data to be passed into the companion ads. The apiFramework defines the method to use for communication (e.g. ?lashVar?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -681,7 +665,7 @@
 			</xs:element>
 			<xs:element name="AdParameters" minOccurs="0" maxOccurs="1" type="AdParameters_type">
 				<xs:annotation>
-					<xs:documentation>Data to be passed into the companion ads. The apiFramework defines the method to use for communication (e.g. “FlashVar”)</xs:documentation>
+					<xs:documentation>Data to be passed into the companion ads. The apiFramework defines the method to use for communication (e.g. ?lashVar?</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
